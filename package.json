@@ -13,12 +13,20 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@node-rs/argon2": "^1.8.3",
+    "@oslojs/binary": "^0.4.0",
+    "@oslojs/crypto": "^0.6.2",
+    "@oslojs/encoding": "^0.4.1",
+    "@oslojs/otp": "^0.2.1",
+    "@oslojs/webauthn": "^0.6.4",
+    "@pilcrowjs/object-parser": "^0.0.3",
     "@remix-run/node": "^2.11.2",
     "@remix-run/react": "^2.11.2",
     "@remix-run/serve": "^2.11.2",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "uqr": "^0.1.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
