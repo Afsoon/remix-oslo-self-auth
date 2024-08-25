@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+		"biomejs.biome",
+		"ms-azuretools.vscode-docker",
+        "vitest.explorer",
+        "yzhang.markdown-all-in-one",
+        "vscode-icons-team.vscode-icons",
+        "codezombiech.gitignore",
+        "streetsidesoftware.code-spell-checker",
+        "aaron-bond.better-comments",
+	]
+}

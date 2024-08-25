@@ -6,7 +6,9 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "format": "biome format --write ./app",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write ./app",
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
@@ -19,6 +21,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@remix-run/dev": "^2.11.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
