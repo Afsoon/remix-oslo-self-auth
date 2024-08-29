@@ -53,3 +53,15 @@ export const sessions = sqliteTable("sessions", {
       onDelete: "cascade",
     }),
 });
+
+export const email_verification_request = sqliteTable("email_verification_request", {
+  id: integer("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
+  email: text("email").notNull(),
+  code: text("code").notNull(),
+  expires_at: integer("expires_at", { mode: "timestamp" }).notNull(),
+  user_id: integer("user_id")
+    .notNull()
+    .references(() => users.id, {
+      onDelete: "cascade",
+    }),
+});
