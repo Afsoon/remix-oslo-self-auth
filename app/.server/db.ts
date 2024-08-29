@@ -1,7 +1,14 @@
 import Database from "better-sqlite3";
 import { Kyselify } from "drizzle-orm/kysely";
 import { Kysely, SqliteDialect, sql } from "kysely";
-import { passkey_credential, security_key_credential, sessions, totp_credential, users } from "./user/schema";
+import {
+  email_verification_request,
+  passkey_credential,
+  security_key_credential,
+  sessions,
+  totp_credential,
+  users,
+} from "./user/schema";
 
 interface SQLDatabase {
   users: Kyselify<typeof users>;
@@ -9,6 +16,7 @@ interface SQLDatabase {
   passkey_credential: Kyselify<typeof passkey_credential>;
   security_key_credential: Kyselify<typeof security_key_credential>;
   sessions: Kyselify<typeof sessions>;
+  email_verification_request: Kyselify<typeof email_verification_request>;
 }
 
 const sqlite = new Database("data/sqlite.db");
