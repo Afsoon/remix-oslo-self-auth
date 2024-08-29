@@ -10,7 +10,9 @@
     "lint": "biome lint .",
     "lint:fix": "biome lint --write ./app",
     "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "migrate:apply": "tsx migrate.ts",
+    "migrate:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@node-rs/argon2": "^1.8.3",
@@ -23,7 +25,10 @@
     "@remix-run/node": "^2.11.2",
     "@remix-run/react": "^2.11.2",
     "@remix-run/serve": "^2.11.2",
+    "better-sqlite3": "^11.2.1",
+    "drizzle-orm": "^0.33.0",
     "isbot": "^4.1.0",
+    "kysely": "^0.27.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uqr": "^0.1.2"
@@ -31,11 +36,16 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@remix-run/dev": "^2.11.2",
+    "@types/better-sqlite3": "^7.6.11",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.19",
+    "drizzle-kit": "^0.24.2",
+    "kanel": "^3.9.1",
+    "kanel-kysely": "^0.5.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
+    "tsx": "^4.18.0",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1"
