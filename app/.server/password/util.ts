@@ -16,3 +16,10 @@ export function generateRandomOTP(): string {
   const code = encodeBase32(bytes);
   return code;
 }
+
+export function generateRandomRecoveryCode(): string {
+  const recoveryCodeBytes = new Uint8Array(10);
+  crypto.getRandomValues(recoveryCodeBytes);
+  const recoveryCode = encodeBase32(recoveryCodeBytes);
+  return recoveryCode;
+}
